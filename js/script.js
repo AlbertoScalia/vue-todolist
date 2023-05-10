@@ -6,7 +6,7 @@ createApp({
             tasks: [
                 {
                     text: 'Preparare il meeting',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Creare la presentazione',
@@ -29,6 +29,14 @@ createApp({
                     done: false
                 },
             ]
+        }
+    },
+    methods: {
+        rimuoviTask(index) {
+            this.tasks.splice(index, 1);
+        },
+        is_done(i) {
+            this.tasks[i].done = !this.tasks[i].done
         }
     }
 }).mount('#app')

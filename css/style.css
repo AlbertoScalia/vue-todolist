@@ -1,0 +1,14 @@
+li>span,
+i {
+    cursor: pointer;
+}
+
+.fa-check {
+    top: -4px;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+span.done {
+    text-decoration: line-through;
+}
