@@ -18,6 +18,22 @@
     <div id="app">
         <div class="container">
             <h1>Vue-todolist</h1>
+
+            <!--Input-->
+            <div class="input-group flex-nowrap my-3">
+                <input type="text" class="form-control" placeholder="Aggiungi una task" v-model="nuovaTask"
+                    @keyup.enter="aggiungiTask()">
+                <span class="input-group-text" @click="aggiungiTask()">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+            </div>
+
+            <!--Testo di errore-->
+            <p class="text-danger" role="alert" v-if="error !== ''">
+                {{error}}
+            </p>
+
+            <!--Lista-->
             <div class="card todo_list my-3">
                 <div class="card-header">
                     <h3>Da fare:</h3>
@@ -40,9 +56,6 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
